@@ -1,0 +1,9 @@
+{
+  "name": "redux-compose",
+  "version": "1.0.0",
+  "description": "Higher Order functions to aid in composing Redux Reducers",
+  "main": "index.js",
+  "repository": "https://github.com/RateGravity/redux-compose.git",
+  "author": "Own Up <dev@ownup.com>",
+  "license": "MIT"
+}
