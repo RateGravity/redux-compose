@@ -33,5 +33,12 @@
     "format": "prettier --write \"**/*.{ts,js,md}\"",
     "lint": "gulp lint",
     "test": "jest --config=jest.config.js"
-  }
+  },
+  "keywords": [
+    "redux",
+    "higher order",
+    "compose",
+    "composeReducers",
+    "typescript"
+  ]
 }
