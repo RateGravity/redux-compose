@@ -1,4 +1,6 @@
 # Redux Compose
+[![Build Status](https://travis-ci.com/RateGravity/redux-compose.svg?branch=version-1)](https://travis-ci.com/RateGravity/redux-compose)
+[![npm](https://img.shields.io/npm/v/redux-compose)](https://www.npmjs.com/package/redux-compose)
 
 Higher Order functions to aid in composing Redux Reducers.
 
