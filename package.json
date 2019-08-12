@@ -1,0 +1,44 @@
+{
+  "name": "redux-compose",
+  "version": "1.0.0",
+  "description": "Higher Order functions to aid in composing Redux Reducers",
+  "main": "index.js",
+  "repository": "https://github.com/RateGravity/redux-compose.git",
+  "author": "Own Up <dev@ownup.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.17",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^5.0.1",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "format": "prettier --write \"**/*.{ts,js,md}\"",
+    "lint": "gulp lint",
+    "test": "jest --config=jest.config.js"
+  },
+  "keywords": [
+    "redux",
+    "higher order",
+    "compose",
+    "composeReducers",
+    "typescript"
+  ]
+}

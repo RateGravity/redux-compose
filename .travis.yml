@@ -1,0 +1,20 @@
+language: node_js
+branches:
+  only:
+  - version-1
+script:
+- yarn gulp
+- yarn test
+before_deploy:
+- echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
+deploy:
+  provider: script
+  skip_cleanup: true
+  on:
+    branches: version-1
+    tags: true
+  script: cd ./dist && npm version --git-tag-version=false from-git && npm publish
+env:
+  global:
+    # NPM_TOKEN
+    secure: ADDsbBSS0RGAMpyuElavEcNsq5a0hsP9RlKaO7Tx8YE9i4M5cLraD0hdGmANBWX5AwIfdEaVHmN0ehHHMaHt9/ZR96QFHQVeG6GDIBNAhcECqogz2Fwm5c+Jr6SORr2zlRFHTovptWdYOfEGebAjqU9vk40ZDnz/Gx0GDfqh0cG5dGRHmqFixSZHKjb33GsSMze9h0Nz7Q3a4z306feb0oqltRZ3jGIRCqmuXpwyNHX6N651N/bpB23sPbCYCIxuazPlgj63A4PqXJhw5CHRyhL4D4H3vLlBuDXXbS/uWTLIl79V4+zjK21s/avku5BHcLy80ierh2psa7MSX5FWxuhtGYy4AB5SpoclsR+Hepb1v455PconHlaFGodYwuFLOCeqPT9/M8YujLcan168gxhLmMeJ4iz9E8R5vo8wjJg7PsFdtWfENhXckAKVP9WeiwFnV1/4JGYx3lvQHYDgMumJMHvBs9HjtQ0VCLJxJbMR8hLmqdZrIH3buiRRyJmQIZIcptw5hoSwLr6XSV2VXofjVIsgsphwkraffuVuiFWkLby+f36HWTSF+RDyfBwd9aJkxXeNqf8h+L26Mzca2QKN5eJOgJmLpCtfaZEJeAAC9Sd4nEew/VJGv/p4w7ulQoN+Y9YFgpHMQJldbhWrHggvYIkH6lDvba8+bmLllxU=
