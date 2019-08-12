@@ -2,6 +2,7 @@ language: node_js
 branches:
   only:
   - version-1
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 script:
 - yarn gulp
 - yarn test
@@ -11,7 +12,6 @@ deploy:
   provider: script
   skip_cleanup: true
   on:
-    branches: version-1
     tags: true
   script: cd ./dist && npm version --git-tag-version=false from-git && npm publish
 env:
