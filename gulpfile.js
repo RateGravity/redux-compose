@@ -30,7 +30,8 @@ const transpile = () =>
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'));
 
-const copyConfig = () => gulp.src('package.json').pipe(gulp.dest('./dist'));
+const copyConfig = () =>
+  gulp.src(['package.json', 'README.md', 'LICENSE']).pipe(gulp.dest('./dist'));
 
 const build = gulp.series(lint, typeCheck, transpile, copyConfig);
 
