@@ -13,7 +13,7 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-  script: cd ./dist && npm version --git-tag-version=false from-git && npm publish
+  script: cd ./dist && npm version --git-tag-version=false $TRAVIS_TAG && npm publish
 env:
   global:
     # NPM_TOKEN
