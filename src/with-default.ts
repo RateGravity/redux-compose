@@ -12,5 +12,6 @@ import { AnyAction, Reducer } from './redux';
  */
 export const withDefault = <S, A extends AnyAction = AnyAction>(
   defaultState: S,
-  reducer: (definedState: S, action: A) => S = s => s
-): Reducer<S, A> => (state = defaultState, action) => reducer(state, action);
+  reducer: Reducer<S, A> = s => s
+): ((state: S | undefined, action: A) => S) => (state = defaultState, action) =>
+  reducer(state, action);
