@@ -30,7 +30,7 @@ export const ofType = <S, NA extends A, A extends AnyAction = AnyAction>(
     }
     return item;
   });
-  return (state: S | undefined, action: A) => {
+  return (state: S, action: A) => {
     if (t.some(p => p(action))) {
       return reducer(state, action as NA);
     }
