@@ -1,5 +1,5 @@
 {
-  "name": "redux-compose",
+  "name": "@rategravity/redux-compose",
   "version": "1.0.0",
   "description": "Higher Order functions to aid in composing Redux Reducers",
   "main": "index.js",
@@ -40,5 +40,6 @@
     "compose",
     "composeReducers",
     "typescript"
-  ]
+  ],
+  "private": true
 }
